@@ -1,0 +1,31 @@
+<nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient">
+    <div class="container">
+      <a class="navbar-brand logo" [routerLink]="['/']">
+        <img src="../assets/icons/icon-512x512.png" class="logo"/>
+      </a>
+      <button class="navbar-toggler" 
+        data-target="#navbarNav" type="button" 
+        data-toggle="collapse" 
+        data-target=".navbar-collapse" 
+        aria-label="Toggle navigation" 
+        [attr.aria-expanded]="isExpanded" 
+        (click)="toggle()">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="navbar-toggler-icon"></span>
+      </button>
+        <div class="collapse navbar-collapse" id="navbarNav" [ngClass]="{ show: isExpanded }">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"
+                [routerLinkActive]="['link-active']"
+                [routerLinkActiveOptions]="{ exact: true }">
+                    <a class="nav-link" [routerLink]="['/']">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" routerLink="/projects" routerLinkActive="['link-active']">Projects</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
+                <li class="nav-item"><a class="nav-link" href="hire-me.html">Hire me</a></li>
+            </ul>
+        </div>
+    </div>
+  </nav>
