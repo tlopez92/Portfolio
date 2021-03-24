@@ -1,7 +1,2 @@
 codecov:
   token: 7f31fb5c-32e4-4d02-97a5-50ef91ea5c94
-language: node_js
-scripts:
-  - npm install codecov -g
-after_success:
-  - codecov
